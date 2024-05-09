@@ -11,6 +11,10 @@
     .pSize{
       font-size: 30;
     }
+    .pSize1{
+      font-size: 30;
+      color: blue;
+    }
   </style>
   </head>
   <body>
@@ -46,12 +50,15 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak=0
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
               allMove = `You lost the game🙁`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
 
               paragraph1.textContent = allScore;
               paragraph2.textContent = allMove;
+              paragraph3.textContent = WinstreakTxt;
 
               alert(`You lost the game`)
 
@@ -72,12 +79,19 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak++
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
               allMove = `you won the game🙂`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
 
               paragraph2.textContent = allMove;
               paragraph1.textContent = allScore;
+              paragraph3.textContent = WinstreakTxt;
+
+              if(WinstreakRecord<Winstreak){
+                WinstreakRecordFunction()
+              }
 
               alert(`You won the game`)
 
@@ -116,12 +130,15 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak=0
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
               allMove = `You lost the game🙁`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
 
               paragraph1.textContent = allScore;
               paragraph2.textContent = allMove;
+              paragraph3.textContent = WinstreakTxt;
 
               alert(`You lost the game`)
               
@@ -142,12 +159,19 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak++
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
               allMove = `you won the game🙂`;
 
               paragraph2.textContent = allMove;
               paragraph1.textContent = allScore;
+              paragraph3.textContent = WinstreakTxt;
+
+              if(WinstreakRecord<Winstreak){
+                WinstreakRecordFunction()
+              }
 
               alert(`You won the game`)
 
@@ -186,12 +210,15 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak=0
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
               allMove = `You lost the game🙁`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
 
               paragraph1.textContent = allScore;
               paragraph2.textContent = allMove;
+              paragraph3.textContent = WinstreakTxt;
 
               alert(`You lost the game`)
               
@@ -212,12 +239,19 @@
               wins=0
               losses=0
               Ties=0
+              Winstreak++;
 
               allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
               allMove = `you won the game🙂`;
+              WinstreakTxt= `Your winning streak is:${Winstreak}`
 
               paragraph2.textContent = allMove;
               paragraph1.textContent = allScore;
+              paragraph3.textContent = WinstreakTxt;
+
+              if(WinstreakRecord<Winstreak){
+                WinstreakRecordFunction()
+              }
 
               alert(`You won the game`)
 
@@ -230,6 +264,8 @@
     
     <p class = "pSize" id="ScoreTxt"></p>
     <p class = "pSize" id="movesTxt"></p>
+    <p class = "pSize1" id="WinstreakClass"></p>
+    <p class = "pSize1" id="WinstreakRecordClass"></p>
     
     <script src="MyScript.js"></script>
   </body>
