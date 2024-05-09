@@ -1,0 +1,236 @@
+<!DOCTYPE html1>
+<html>
+  <head>
+    <title>
+      RockPaperScissorsGame
+    </title>
+    <style>
+    .buttonSize{
+      font-size: 50;
+    }
+    .pSize{
+      font-size: 30;
+    }
+  </style>
+  </head>
+  <body>
+    <p>
+      Rock Paper Scissors Game
+    </p>
+    <button class="buttonSize"
+    onclick="
+    playerMove=1
+    AImove = Math.floor(Math.random() * 3 + 1)
+
+      if(AImove==1){
+       Ties++;
+       console.log('ai choose Rock');
+        console.log('tie');
+        console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+        allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+        allMove = `you picked ✊, ai picked ✊, it's a tie😐`;
+        paragraph2.textContent = allMove;
+        paragraph1.textContent = allScore;
+      }
+      if(AImove===2){
+        losses++;
+        console.log('ai choose Paper');
+          console.log('lose');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked ✊, ai picked 📄, you lost🙁`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+
+          if(losses>=10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `You lost the game🙁`;
+
+              paragraph1.textContent = allScore;
+              paragraph2.textContent = allMove;
+
+              alert(`You lost the game`)
+
+              LossingSound.play()
+            }
+        }
+        if(AImove===3){
+            wins++;
+            console.log('ai choose Scissors');
+            console.log('win');
+            console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+            allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+            allMove = `you picked ✊ ai picked ✂️ you won🙂`;
+            paragraph2.textContent = allMove;
+            paragraph1.textContent = allScore;
+
+            if(wins>=10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `you won the game🙂`;
+
+              paragraph2.textContent = allMove;
+              paragraph1.textContent = allScore;
+
+              alert(`You won the game`)
+
+              WinningSound.play()
+            }
+        }
+    ">
+      ✊
+    </button>
+    <button class="buttonSize"
+    onclick="
+    playerMove=2
+    AImove = Math.floor(Math.random() * 3 + 1)
+
+    if(AImove==1){
+          Ties++;
+          console.log('ai choose Paper');
+          console.log('tie');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked 📄, ai picked 📄, it's a tie😐`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+    }
+    if(AImove===2){
+          losses++;
+          console.log('ai choose Scissors');
+          console.log('lose');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked 📄, ai picked ✂️, you lost🙁`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+          
+          if(losses==10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `You lost the game🙁`;
+
+              paragraph1.textContent = allScore;
+              paragraph2.textContent = allMove;
+
+              alert(`You lost the game`)
+              
+              LossingSound.play()
+            }
+        }
+        if(AImove===3){
+          wins++;
+          console.log('ai choose Rock');
+          console.log('win');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked 📄, ai picked ✊, you won🙂`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+
+          if(wins>=10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `you won the game🙂`;
+
+              paragraph2.textContent = allMove;
+              paragraph1.textContent = allScore;
+
+              alert(`You won the game`)
+
+              WinningSound.play()
+            }
+        }
+    ">
+      📄
+    </button>
+    <button class="buttonSize" 
+    onclick="
+    playerMove=3
+    AImove = Math.floor(Math.random() * 3 + 1)
+   
+    if(AImove==1){
+      Ties++;
+          console.log('ai choose Scissors');
+          console.log('tie');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked ✂️, ai picked ✂️, it's a tie😐`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+    }
+    if(AImove===2){
+          losses++;
+          console.log('ai choose Rock');
+          console.log('lose');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked ✂️, ai picked ✊, you lost🙁`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+
+          if(losses>=10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `You lost the game🙁`;
+
+              paragraph1.textContent = allScore;
+              paragraph2.textContent = allMove;
+
+              alert(`You lost the game`)
+              
+              LossingSound.play()
+            }
+        }
+        if(AImove===3){
+          wins++;
+          console.log('ai choose Paper');
+          console.log('win');
+          console.log(`Ties:${Ties} wins:${wins} losses:${losses}`);
+          allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+          allMove = `you picked ✂️, ai picked 📄, you won🙂`;
+          paragraph2.textContent = allMove;
+          paragraph1.textContent = allScore;
+
+          if(wins>=10){
+              wins=0
+              losses=0
+              Ties=0
+
+              allScore = `Ties:${Ties} wins:${wins} losses:${losses}`;
+              allMove = `you won the game🙂`;
+
+              paragraph2.textContent = allMove;
+              paragraph1.textContent = allScore;
+
+              alert(`You won the game`)
+
+              WinningSound.play()
+            }
+        }
+    ">
+      ✂️
+    </button>
+    
+    <p class = "pSize" id="ScoreTxt"></p>
+    <p class = "pSize" id="movesTxt"></p>
+    
+    <script src="MyScript.js"></script>
+  </body>
+</html>
